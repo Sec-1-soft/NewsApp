@@ -32,7 +32,7 @@ class _NewsScaffoldState extends State<NewsScaffold> {
   bool _isShow = true;
 
   Future<String> getNewsData(String query) async{
-    final response = await http.get(Uri.parse("https://newsapi.org/v2/everything?q=$query&from=2023-08-12&sortBy=publishedAt&language=tr&apiKey=255ba84b2bca41cbafbaa5df537488cc"));
+    final response = await http.get(Uri.parse("https://newsapi.org/v2/everything?q=$query&from=2023-08-12&sortBy=publishedAt&language=tr&apiKey='Your News API Key'"));
     if(response.statusCode == 200){
       return response.body;
     }
